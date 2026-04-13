@@ -1,0 +1,266 @@
+.cart-page {
+  background: #f7f3ee;
+  color: #1a1918;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2rem 1.25rem 4rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cart-page__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
+
+.cart-page__hint {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.9rem;
+  color: #6b6560;
+  text-align: center;
+  margin: 0 0 1rem;
+}
+
+.cart-page__error {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.85rem;
+  color: #b71c1c;
+  text-align: center;
+  margin: 0 0 1rem;
+}
+
+.cart-page__cta {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0.65rem 1.5rem;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background: #1a1918;
+  border: 1px solid #1a1918;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.cart-page__cta--ghost {
+  color: #1a1918;
+  background: transparent;
+  cursor: pointer;
+}
+
+.cart-page__cta:hover {
+  opacity: 0.9;
+}
+
+.cart-page--guest .cart-page__cta {
+  display: block;
+  width: fit-content;
+}
+
+.cart-page__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #d9d4cb;
+}
+
+.cart-page__row {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr auto auto auto;
+  gap: 1rem 0.75rem;
+  align-items: center;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #d9d4cb;
+}
+
+@media (max-width: 640px) {
+  .cart-page__row {
+    grid-template-columns: 4.5rem 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .cart-page__qty {
+    grid-column: 2;
+  }
+
+  .cart-page__line-total {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .cart-page__remove {
+    grid-column: 1 / -1;
+    justify-self: end;
+  }
+}
+
+.cart-page__thumb-wrap {
+  display: block;
+  aspect-ratio: 3 / 4;
+  background: #ebe6de;
+  overflow: hidden;
+}
+
+.cart-page__thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cart-page__meta {
+  min-width: 0;
+}
+
+.cart-page__name {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1a1918;
+  text-decoration: none;
+}
+
+.cart-page__name:hover {
+  text-decoration: underline;
+}
+
+.cart-page__sku,
+.cart-page__opts,
+.cart-page__unit {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.75rem;
+  color: #6b6560;
+  margin: 0.25rem 0 0;
+}
+
+.cart-page__qty {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #d9d4cb;
+  background: #fff;
+}
+
+.cart-page__qty-btn {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #1a1918;
+}
+
+.cart-page__qty-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.cart-page__qty-val {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.8rem;
+  min-width: 1.5rem;
+  text-align: center;
+}
+
+.cart-page__line-total {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin: 0;
+  min-width: 4rem;
+  text-align: right;
+}
+
+.cart-page__remove {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.72rem;
+  color: #6b6560;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.cart-page__remove:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cart-page__summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #1a1918;
+}
+
+.cart-page__summary-label {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cart-page__summary-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.cart-page__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+  max-width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cart-page__checkout {
+  display: block;
+  padding: 0.85rem 1.25rem;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: #1a1918;
+  border: 1px solid #1a1918;
+  border-radius: 2px;
+  transition: opacity 0.2s;
+}
+
+.cart-page__checkout:hover {
+  opacity: 0.92;
+}
+
+.cart-page__shop-more {
+  display: block;
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #1a1918;
+}
+
+.cart-page__shop-more:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,168 @@
+/* Aligns with HomePage: #f7f3ee / #ebe7df, Cormorant Garamond + Noto Sans KR */
+
+.about-page {
+  background: #f7f3ee;
+  color: #1a1918;
+  /* #root is text-align:center — reset so lists and wrapped lines align left */
+  text-align: left;
+}
+
+.about-page__shell {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3.5rem 1.25rem 2.5rem;
+}
+
+.about-page__shell--hero {
+  padding-bottom: 1rem;
+}
+
+.about-page__header {
+  text-align: center;
+}
+
+.about-page__eyebrow {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  letter-spacing: 0.3em;
+  font-size: 0.85rem;
+  margin: 0 0 1rem;
+  color: #5c5854;
+}
+
+.about-page__title {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin: 0 0 1.25rem;
+  color: #1a1918;
+}
+
+.about-page__lead {
+  font-family: 'Noto Sans KR', system-ui, sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #5c5854;
+  margin: 0 auto;
+  max-width: 34rem;
+}
+
+.about-page__band {
+  background: #ebe7df;
+  margin: 0;
+  padding: 2.75rem 1.25rem;
+  border-top: 1px solid rgba(26, 25, 24, 0.06);
+  border-bottom: 1px solid rgba(26, 25, 24, 0.06);
+}
+
+.about-page__band-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.about-page__section {
+  margin: 0;
+}
+
+.about-page__section + .about-page__section {
+  margin-top: 2.5rem;
+}
+
+.about-page__section--flush {
+  margin: 0;
+}
+
+.about-page__h2 {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: clamp(1.35rem, 3vw, 1.65rem);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  margin: 0 0 1rem;
+  color: #1a1918;
+}
+
+/* Center the section title only; body + list stay left-aligned */
+.about-page__section--values .about-page__h2 {
+  text-align: center;
+}
+
+.about-page__body {
+  font-family: 'Noto Sans KR', system-ui, sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: #4a4642;
+  margin: 0;
+}
+
+.about-page__list {
+  margin: 0.25rem auto 0;
+  max-width: 38rem;
+  padding: 0;
+  padding-inline-start: 1.35rem;
+  list-style-type: disc;
+  list-style-position: outside;
+  font-family: 'Noto Sans KR', system-ui, sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: #4a4642;
+  text-align: left;
+}
+
+.about-page__list li {
+  padding-inline-start: 0.35rem;
+}
+
+.about-page__list li::marker {
+  color: #8a8580;
+}
+
+.about-page__list li + li {
+  margin-top: 0.75rem;
+}
+
+.about-page__list strong {
+  color: #2a2825;
+  font-weight: 600;
+}
+
+.about-page__back {
+  margin: 3rem 0 0;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(26, 25, 24, 0.1);
+  text-align: center;
+}
+
+.about-page__cta {
+  display: inline-block;
+  font-family: 'Noto Sans KR', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #1a1918;
+  text-decoration: none;
+  border-bottom: 1px solid #1a1918;
+  padding-bottom: 3px;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.about-page__cta:hover {
+  opacity: 0.85;
+  color: #5c5854;
+  border-bottom-color: #5c5854;
+}
+
+.about-page__cta:focus-visible {
+  outline: 2px solid #1a1918;
+  outline-offset: 4px;
+}
+
+@media (max-width: 480px) {
+  .about-page__shell {
+    padding-top: 2.75rem;
+  }
+
+  .about-page__band {
+    padding: 2.25rem 1rem;
+  }
+}

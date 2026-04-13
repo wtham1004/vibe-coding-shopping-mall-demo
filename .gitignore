@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Secrets — never commit (examples are tracked)
+.env
+.env.local
+.env.production
+client/.env
+server/.env
+
+# Builds
+client/dist
+client/dist-ssr
+
+# Logs & OS
+*.log
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea
+*.sw?

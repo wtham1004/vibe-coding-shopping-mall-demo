@@ -1,0 +1,335 @@
+/* Blog list + post — NOIR palette, left-aligned (see AboutPage / #root) */
+
+.blog-page,
+.blog-post {
+  background: #f7f3ee;
+  color: #1a1918;
+  text-align: left;
+}
+
+.blog-page__hero {
+  text-align: center;
+  padding: 3rem 1.25rem 2rem;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.blog-page__eyebrow {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  letter-spacing: 0.3em;
+  font-size: 0.85rem;
+  margin: 0 0 1rem;
+  color: #5c5854;
+}
+
+.blog-page__title {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin: 0 0 1rem;
+}
+
+.blog-page__lead {
+  font-family: 'Noto Sans KR', system-ui, sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #5c5854;
+  margin: 0;
+}
+
+.blog-page__shell {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.25rem 3rem;
+}
+
+.blog-page__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+@media (min-width: 720px) {
+  .blog-page__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+  }
+}
+
+.blog-page__card-wrap {
+  margin: 0;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border: 1px solid rgba(26, 25, 24, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(26, 25, 24, 0.06);
+}
+
+.blog-card__media-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.blog-card__img-wrap {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #ebe7df;
+}
+
+.blog-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.blog-card:hover .blog-card__img {
+  transform: scale(1.03);
+}
+
+.blog-card__body {
+  padding: 1.35rem 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.blog-card__meta {
+  font-family: 'Noto Sans KR', system-ui, sans-serif;
+  font-size: 0.72rem;
+  color: #8a8580;
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.blog-card__dot {
+  margin: 0 0.35rem;
+}
+
+.blog-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0 0 0.65rem;
+}
+
+.blog-card__tag {
+  font-family: 'Noto Sans KR', system-ui, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5c5854;
+  border: 1px solid rgba(26, 25, 24, 0.12);
+  padding: 0.2rem 0.45rem;
+  border-radius: 2px;
+}
+
+.blog-card__title {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin: 0 0 0.35rem;
+  line-height: 1.25;
+}
+
+.blog-card__title a {
+  color: #1a1918;
+  text-decoration: none;
+}
+
+.blog-card__title a:hover {
+  color: #5c5854;
+}
+
+.blog-card__subtitle {
+  font-family: 'Noto Sans KR', system-ui, sans-serif;
+  font-size: 0.82rem;
+  color: #6b6560;
+  margin: 0 0 0.65rem;
+  font-style: italic;
+}
+
+.blog-card__excerpt {
+  font-family: 'Noto Sans KR', system-ui, sans-serif;
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: #4a4642;
+  margin: 0 0 1rem;
+  flex: 1;
+}
+
+.blog-card__read {
+  font-family: 'Noto Sans KR', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #1a1918;
+  text-decoration: none;
+  border-bottom: 1px solid #1a1918;
+  padding-bottom: 2px;
+  align-self: flex-start;
+}
+
+.blog-card__read:hover {
+  opacity: 0.85;
+  color: #5c5854;
+  border-bottom-color: #5c5854;
+}
+
+.blog-page__back {
+  margin: 3rem 0 0;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(26, 25, 24, 0.1);
+  text-align: center;
+}
+
+.blog-page__cta {
+  display: inline-block;
+  font-family: 'Noto Sans KR', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #1a1918;
+  text-decoration: none;
+  border-bottom: 1px solid #1a1918;
+  padding-bottom: 3px;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.blog-page__cta:hover {
+  opacity: 0.85;
+  color: #5c5854;
+  border-bottom-color: #5c5854;
+}
+
+/* ——— Post detail ——— */
+
+.blog-post__hero {
+  text-align: center;
+  padding: 2.75rem 1.25rem 1.5rem;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.blog-post__eyebrow {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  margin: 0 0 1rem;
+}
+
+.blog-post__eyebrow a {
+  color: #5c5854;
+  text-decoration: none;
+}
+
+.blog-post__eyebrow a:hover {
+  color: #1a1918;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.blog-post__title {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: clamp(1.85rem, 4.5vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+
+.blog-post__subtitle {
+  font-family: 'Noto Sans KR', system-ui, sans-serif;
+  font-size: 0.95rem;
+  color: #6b6560;
+  margin: 0 0 1rem;
+  font-style: italic;
+}
+
+.blog-post__meta {
+  font-family: 'Noto Sans KR', system-ui, sans-serif;
+  font-size: 0.78rem;
+  color: #8a8580;
+  margin: 0 0 0.75rem;
+}
+
+.blog-post__dot {
+  margin: 0 0.4rem;
+}
+
+.blog-post__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  justify-content: center;
+  margin: 0;
+}
+
+.blog-post__tag {
+  font-family: 'Noto Sans KR', system-ui, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5c5854;
+  border: 1px solid rgba(26, 25, 24, 0.12);
+  padding: 0.2rem 0.45rem;
+  border-radius: 2px;
+}
+
+.blog-post__cover-wrap {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  padding: 0 1.25rem;
+}
+
+.blog-post__cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+  background: #ebe7df;
+}
+
+.blog-post__shell {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 0 1.25rem 3.5rem;
+}
+
+.blog-post__content {
+  margin-bottom: 2.5rem;
+}
+
+.blog-post__para {
+  font-family: 'Noto Sans KR', system-ui, sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: #3d3a36;
+  margin: 0 0 1.25rem;
+}
+
+.blog-post__para:last-child {
+  margin-bottom: 0;
+}
+
+.blog-post__nav {
+  margin: 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(26, 25, 24, 0.1);
+}
