@@ -1,0 +1,13 @@
+{
+  "name": "shopping-mall-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "heroku-postbuild": "npm --prefix server ci",
+    "start": "npm --prefix server start"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
+
